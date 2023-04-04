@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="hello" class="com.durgasoft.beans.Hello" factory-method="getInstance"/>
+    <bean id="welcome" class="com.durgasoft.beans.Welcome" factory-method="getWelcomeInstance" factory-bean="welcomeFactory"/>
+        <bean id="welcomeFactory" class="com.durgasoft.factory.WelcomeFactory"/>
+
+
+
+
+</beans>
